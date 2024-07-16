@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.router-link-active {
+	@apply border border-yellow-500;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+::-moz-scrollbar {
+	display: none;
+}
+
+body {
+	scrollbar-width: none;
+}

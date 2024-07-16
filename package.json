@@ -1,0 +1,35 @@
+{
+  "name": "telegram-web-app-clicker",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@animxyz/vue3": "^0.6.7",
+    "canvas-confetti": "^1.9.3",
+    "firebase": "^10.12.2",
+    "pinia": "^2.1.7",
+    "uuid": "^10.0.0",
+    "vue": "^3.4.21",
+    "vue-countup-v3": "^1.4.2",
+    "vue-router": "^4.4.0",
+    "vue-tg": "^0.6.1"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^20.14.8",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animated": "^1.1.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
