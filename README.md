@@ -4,3 +4,5 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 # Bot in Telegram
 @bananaa_clicker_bot
+
+Song https://suno.com/song/a3963737-c9f5-4177-8ce3-4e4b84b72bfe
