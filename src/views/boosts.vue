@@ -1,8 +1,5 @@
 <template>
-	<div
-		class="grow overflow-x-scroll"
-		ref="fixscrollRef"
-	>
+	<div class="grow overflow-x-scroll">
 		<div class="grid grid-cols-1 gap-2 p-2">
 			<div
 				v-for="(boost, idx) in BOOSTS"
@@ -50,11 +47,10 @@
 
 <script setup lang="ts">
 import { useUserStore } from '@/stores/useUserStore';
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { computed, onMounted, onUnmounted } from 'vue';
 import usePayBoost from '@/composable/usePayBoost';
 import useConfetti from '@/composable/useConfetti';
 import CirclePing from '@/components/ui/CirclePing.vue';
-import fixScroll from '@/fixScroll';
 import { BOOSTS } from '@/constants';
 
 const storeUser = useUserStore();
@@ -63,8 +59,6 @@ const { handlePay } = usePayBoost();
 const { bananasEffect } = useConfetti();
 
 const bananas = computed(() => storeUser.user.bananas);
-
-const fixscrollRef = ref<HTMLElement>();
 
 const handlePayBoost = (boost: IBoostStore) => {
 	handlePay(boost);
@@ -78,7 +72,6 @@ const toggleBodyClasses = (): void => {
 
 onMounted(() => {
 	toggleBodyClasses();
-	fixScroll(fixscrollRef.value!);
 });
 onUnmounted(toggleBodyClasses);
 </script>

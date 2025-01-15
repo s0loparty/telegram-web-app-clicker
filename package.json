@@ -1,7 +1,11 @@
 {
   "name": "telegram-web-app-clicker",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": {
+    "email": "alabamaster1@gmail.com",
+    "name": "Alexander"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,11 +21,12 @@
     "vue": "^3.4.21",
     "vue-countup-v3": "^1.4.2",
     "vue-router": "^4.4.0",
-    "vue-tg": "^0.6.1"
+    "vue-tg": "^0.8.0"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.4",
     "@types/node": "^20.14.8",
+    "@types/telegram-web-app": "^7.10.1",
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",

@@ -25,11 +25,6 @@ const router = createRouter({
 router.beforeEach(async (to, _, next) => {
 	const webApp = useWebApp();
 	const isAuthenticated = !!webApp.initDataUnsafe?.user;
-	const isDEV = import.meta.env.DEV;
-
-	if (isDEV) {
-		return next();
-	}
 
 	if (!isAuthenticated && to.name !== 'block') {
 		return next({ name: 'block' });

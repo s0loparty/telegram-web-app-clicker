@@ -1,3 +1,5 @@
+export const PLATFORMS_LOCKED = ['weba', 'webk', 'unknown'];
+
 export const BOOSTS: IBoostStore[] = [
 	{
 		price: 100,

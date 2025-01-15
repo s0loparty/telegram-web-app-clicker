@@ -2,8 +2,9 @@ import './style.css';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import router from './router';
-import VueTelegram from 'vue-tg';
 import App from './App.vue';
+
+import { VueTelegramPlugin } from 'vue-tg';
 
 import VueAnimXyz from '@animxyz/vue3';
 import '@animxyz/core';
@@ -22,7 +23,7 @@ const app = createApp(App);
 app.use(pinia);
 app.use(router);
 app.use(VueAnimXyz);
-app.use(VueTelegram);
+app.use(VueTelegramPlugin);
 
 app.component('MainLayout', MainLayout);
 app.component('BlockLayout', BlockLayout);

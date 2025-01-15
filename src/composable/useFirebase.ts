@@ -31,13 +31,13 @@ const useFirebase = () => {
 			}
 		});
 
-		// console.log('createUser', storeUser.user);
-
 		storeUser.saveUserData();
 	};
 
 	const checkUserInDatabase = async (): Promise<IUserStore | null> => {
-		const userRef = query(ref(database, 'users/' + user.id));
+		if (!user) return null;
+
+		const userRef = query(ref(database, 'users/' + user?.id));
 		const userRecord = await get(userRef);
 
 		return userRecord.val();
@@ -45,8 +45,6 @@ const useFirebase = () => {
 
 	const initUserData = async (): Promise<void> => {
 		const userInDatabase = await checkUserInDatabase();
-
-		// console.log('userInDatabase', userInDatabase);
 
 		if (userInDatabase) {
 			onValue(ref(database, 'users/' + user.id), (snapshot) => {
